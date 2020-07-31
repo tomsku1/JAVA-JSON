@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<xs:element name="uniwersytet">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="wydzial" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="wydzial">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="nazwa" type="xs:string"/>
+				<xs:element ref="adres" maxOccurs="unbounded"/>
+				<xs:element ref="pracownik" maxOccurs="unbounded"/>
+				<xs:element ref="przedmiot" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="ID_wydzialu" type="xs:ID" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="adres">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ulica" type="xs:string"/>
+				<xs:element name="numer" type="xs:string"/>
+				<xs:element name="kod_pocztowy" type="xs:string"/>
+				<xs:element name="miejscowosc" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="pracownik">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="imie" type="xs:string"/>
+				<xs:element name="nazwisko" type="xs:string"/>
+				<xs:element name="tytul" type="xs:string" minOccurs="0"/>
+				<xs:element name="kategoria">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:enumeration value="naukowy"/>
+							<xs:enumeration value="administracyjny"/>
+							<xs:enumeration value="techniczny"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element ref="adres" minOccurs="1" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="ID_pracownika" type="xs:ID" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="przedmiot">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="nazwa" type="xs:string"/>
+				<xs:element name="liczba_uczestnikow">
+					<xs:simpleType>
+						<xs:restriction base="xs:integer">
+							<xs:minInclusive value="6"/>
+							<xs:maxInclusive value="400"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="ID_przedmiotu" type="xs:ID" use="required"/>
+			<xs:attribute name="ID_wykladowcy"  type="xs:IDREFS" use="required"/>
+		</xs:complexType>
+	</xs:element>
+
+	
+</xs:schema>

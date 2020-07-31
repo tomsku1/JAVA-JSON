@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uniwersytet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="uniwersytet.xsd">
+		  <wydzial ID_wydzialu="W1">
+			<nazwa>informatyczny</nazwa>
+			<adres>
+				<ulica>Marszalkowska</ulica>
+				<numer>3</numer>
+				<kod_pocztowy>02-400</kod_pocztowy>
+				<miejscowosc>Warszawa</miejscowosc>
+			</adres>
+			<pracownik ID_pracownika="P1">
+				<imie>Jacek</imie>
+				<nazwisko>Kowalski</nazwisko>
+				<kategoria>techniczny</kategoria>
+				<adres>
+					<ulica>Piekna</ulica>
+					<numer>12</numer>
+					<kod_pocztowy>53-500</kod_pocztowy>
+					<miejscowosc>Wroclaw</miejscowosc>
+				</adres>
+			</pracownik>
+			<pracownik ID_pracownika="P2">
+				<imie>Grazyna</imie>
+				<nazwisko>Nowak</nazwisko>
+				<kategoria>administracyjny</kategoria>
+				<adres>
+					<ulica>Slaska</ulica>
+					<numer>46C</numer>
+					<kod_pocztowy>57-500</kod_pocztowy>
+					<miejscowosc>Wroclaw</miejscowosc>
+				</adres>
+			</pracownik>
+			<pracownik ID_pracownika="P3">
+				<imie>Jerzy</imie>
+				<nazwisko>Piatek</nazwisko>
+				<kategoria>naukowy</kategoria>
+				<adres>
+					<ulica>Sliczna</ulica>
+					<numer>1</numer>
+					<kod_pocztowy>53-540</kod_pocztowy>
+					<miejscowosc>Wroclaw</miejscowosc>
+				</adres>
+			</pracownik>
+			<przedmiot ID_przedmiotu="PRZ1" ID_wykladowcy="P1">
+				<nazwa>matematyka</nazwa>
+				<liczba_uczestnikow>280</liczba_uczestnikow>
+			</przedmiot>
+			<przedmiot ID_przedmiotu="PRZ2" ID_wykladowcy="P2">
+				<nazwa>informatyka</nazwa>
+				<liczba_uczestnikow>350</liczba_uczestnikow>
+			</przedmiot>
+		  </wydzial>
+		  
+		  <wydzial ID_wydzialu="W2">
+			<nazwa>dziennikarstwa</nazwa>
+			<adres>
+				<ulica>Dluga</ulica>
+				<numer>6A</numer>
+				<kod_pocztowy>50-500</kod_pocztowy>
+				<miejscowosc>Wroclaw</miejscowosc>
+			</adres>
+			<pracownik ID_pracownika="P4">
+				<imie>Stanislaw</imie>
+				<nazwisko>Zuk</nazwisko>
+				<kategoria>naukowy</kategoria>
+				<adres>
+					<ulica>Maczka</ulica>
+					<numer>4</numer>
+					<kod_pocztowy>56-540</kod_pocztowy>
+					<miejscowosc>Wroclaw</miejscowosc>
+				</adres>
+			</pracownik>
+			<przedmiot ID_przedmiotu="PRZ3" ID_wykladowcy="P4">
+				<nazwa>JAVA and JSON</nazwa>
+				<liczba_uczestnikow>399</liczba_uczestnikow>
+			</przedmiot>
+		  </wydzial>		
+</uniwersytet>
